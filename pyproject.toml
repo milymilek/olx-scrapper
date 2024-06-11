@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "olx-scrapper"
+version = "0.0.0"
+description = "Olx Scrapper"
+authors = ["Milosz <milosz.hanczyk01@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.4"
+beautifulsoup4 = "^4.12"
+pydantic-settings = {extras = ["toml"], version = "^2.3.2"}
+requests = "^2.32.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -64,15 +64,6 @@ def scrap_refresh(driver, refresh_rate, auth_token, group_id):
         driver.refresh()
 
 
-def get_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--url', type=str)
-    parser.add_argument('--group_id', type=str, help=("telegram group"))
-    parser.add_argument('--auth_token', type=str)
-    parser.add_argument('--refresh_rate', type=int, default=60)
-    parser.add_argument('--driver_path', type=str, default="./chromedriver/chromedriver.exe")
-    args = parser.parse_known_args()[0]
-    return args
 
 
 def scrap(args):
@@ -81,6 +72,3 @@ def scrap(args):
     scrap_refresh(driver, args.refresh_rate, args.auth_token, args.group_id)
 
 
-if __name__ == "__main__":
-    args = get_args()
-    scrap(args)
