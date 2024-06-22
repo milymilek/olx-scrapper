@@ -1,2 +1,2 @@
 base_url = "https://www.olx.pl/krakow/q-mieszkanie/?search%5Border%5D=created_at:desc"
-refresh_rate = 2
+refresh_rate = 15

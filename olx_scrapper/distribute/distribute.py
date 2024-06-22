@@ -6,8 +6,7 @@ from olx_scrapper.distribute import ChannelInterface
 
 class DistributionChannelsInterface(abc.ABC):
     @abc.abstractmethod
-    def distribute(self, messages: list[Message]) -> None:
-        ...
+    def distribute(self, messages: list[Message]) -> None: ...
 
 
 class DistributionChannels(DistributionChannelsInterface):

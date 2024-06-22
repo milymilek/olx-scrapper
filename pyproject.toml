@@ -10,6 +10,17 @@ python = "3.10.4"
 beautifulsoup4 = "^4.12"
 pydantic-settings = {extras = ["toml"], version = "^2.3.2"}
 requests = "^2.32.3"
+python-telegram-bot = "^21.3"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.2"
+coverage = "^7.5.3"
+pytest-mock = "^3.14.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.10"
+pre-commit = "^3.7.1"
 
 [build-system]
 requires = ["poetry-core"]

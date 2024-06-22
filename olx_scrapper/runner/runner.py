@@ -13,16 +13,15 @@ class ScrapRunnerInterface(abc.ABC):
         ...
 
     @abc.abstractmethod
-    def loop(self) -> None:
-        ...
+    def loop(self) -> None: ...
 
 
 class ScrapRunner(ScrapRunnerInterface):
     def __init__(
-        self, 
-        scrapper: ScrapperInterface, 
+        self,
+        scrapper: ScrapperInterface,
         distribution_channels: DistributionChannelsInterface,
-        refresh_rate: int
+        refresh_rate: int,
     ):
         self.scrapper = scrapper
         self.distribution_channels = distribution_channels
@@ -35,6 +34,6 @@ class ScrapRunner(ScrapRunnerInterface):
     def loop(self) -> None:
         while True:
             message = self.scrapper.scrap()
-            #self.distribution_channels.send(message=message)
+            self.distribution_channels.distribute(messages=message)
 
             time.sleep(settings.refresh_rate)

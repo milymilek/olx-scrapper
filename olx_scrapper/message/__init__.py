@@ -1,3 +1,3 @@
-from .message import Message, OfferMessage
+from .message import Message, OfferMessage, OLXMessage
 
-__all__ = [Message, OfferMessage]
+__all__ = [Message, OfferMessage, OLXMessage]
